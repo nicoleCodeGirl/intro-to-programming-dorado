@@ -17,3 +17,131 @@ for (i= 0; i < skills.length; i++){
     skill.innerHTML = skills[i];
     skillsList.appendChild(skill);
 }
+
+
+
+//handle message form submit
+let messageForm = document.getElementsByName("leave_message");
+
+console.log(messageForm[0], "this is the form");
+
+
+
+messageForm[0].addEventListener("submit", function(event){
+    event.preventDefault();
+
+    let theMessageForm = event.target;
+
+    let nameInput = event.target.name.value;
+    let emailInput = event.target.email.value;
+    let messageInput = event.target.message.value;
+
+    //the inputs
+    console.log(nameInput);
+    console.log(emailInput);
+    console.log(messageInput);
+
+    let messageSection = document.getElementById("messages");
+
+    let messageList = messageSection.querySelector("ul");
+
+    let newMessage = document.createElement("li");
+
+    
+    newMessage.innerHTML = `
+    <a href="mailto:${emailInput}">${nameInput}</a>
+    <span>${messageInput}</span>
+    `;
+
+    //adding messages to the list
+    messageList.appendChild(newMessage);
+    
+    
+    //========================THE REMOVE BUTTON===================
+    let removeButton = document.createElement("button");
+    removeButton.type = "button";
+    removeButton.innerHTML = "REMOVE";
+    
+
+    //button removes list item
+    removeButton.addEventListener("click", function(event){
+        event.preventDefault();
+        let entry = removeButton.parentNode;
+        entry.remove();
+
+        //function call to hide or show message list when click remove button
+        hideShow();
+
+    })
+
+    newMessage.appendChild(removeButton);
+
+
+    //======================================================================
+
+
+
+    //========================THE EDIT BUTTON===================
+    // let editButton = document.createElement("button");
+    // editButton.type = "button";
+    // editButton.innerHTML = "EDIT";
+    
+
+    // //button edits list item
+    // editButton.addEventListener("click", function(event){
+    //     event.preventDefault();
+        
+    //     //NOTHING HERE YET. IN PROGRESS. 
+
+    //     console.log("edit button has been clicked");
+
+    //     //function call to hide or show message list when click edit button
+    //     hideShow();
+
+    // })
+
+    // newMessage.appendChild(editButton);
+
+
+    //======================================================================
+
+
+
+
+
+
+    
+
+    messageList.appendChild(newMessage);
+
+    //resetting form fields
+    event.target.reset();
+
+    //function call to hide or show message list when click submit button
+    hideShow();
+
+});
+
+
+let messageSection = document.getElementById("messages");
+
+
+let listItems = messageSection.children[1].childNodes;
+
+
+//function that hides the message section when there are no messages
+//and shows the message section when there is are messages
+function hideShow () {
+
+    if (listItems.length > 0){
+        console.log("there's a list");
+        messageSection.hidden = false;
+    }else{
+        console.log("there is no list");
+        messageSection.hidden = true;
+    }
+}
+
+//function call to hide or show message list when page loads
+hideShow();
+

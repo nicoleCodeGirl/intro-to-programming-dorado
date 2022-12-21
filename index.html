@@ -9,7 +9,7 @@
 </head>
    
 <body>
-    <div id="mainSection" style="padding:10%; border: 5px solid magenta;">
+   
     <section><img src="photos/photoNicole.jpeg" alt="Nicole" width="300" height="300" style="border-radius: 50%; position:relative; left:40%; margin-top:3%;"></section>
    
         <section>
@@ -35,7 +35,31 @@
         <p><a href="https://github.com/nicoleCodeGirl/greetingsWorld">https://github.com/nicoleCodeGirl/greetingsWorld</a></p>
         <p><a href="https://www.twitch.tv/nicolecodegirl">https://www.twitch.tv/nicolecodegirl</a></p>
     </section>  
-</div>
+
+    <section>
+        <h2>Leave a Message</h2>
+        <form name="leave_message">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" required>
+            <br>
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+            <br>
+
+            <label for="message">Message</label>
+            <textarea name="message" id="message" required></textarea>
+            <br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <section id="messages">
+        <h2>Messages</h2>
+        <ul></ul>
+    </section>
+
     <footer></footer>
 
     <script src="js/index.js"></script>
