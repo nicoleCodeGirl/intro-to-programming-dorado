@@ -30,7 +30,7 @@ console.log(messageForm[0], "this is the form");
 messageForm[0].addEventListener("submit", function(event){
     event.preventDefault();
 
-    let theMessageForm = event.target;
+    let messageForm = event.target;
 
     let nameInput = event.target.name.value;
     let emailInput = event.target.email.value;
@@ -108,14 +108,10 @@ messageForm[0].addEventListener("submit", function(event){
 
 
 
-
-
-    
-
     messageList.appendChild(newMessage);
 
     //resetting form fields
-    event.target.reset();
+    messageForm.reset();
 
     //function call to hide or show message list when click submit button
     hideShow();
@@ -123,15 +119,15 @@ messageForm[0].addEventListener("submit", function(event){
 });
 
 
-let messageSection = document.getElementById("messages");
 
-
-let listItems = messageSection.children[1].childNodes;
 
 
 //function that hides the message section when there are no messages
 //and shows the message section when there is are messages
 function hideShow () {
+
+    let messageSection = document.getElementById("messages");
+    let listItems = messageSection.children[1].childNodes;
 
     if (listItems.length > 0){
         console.log("there's a list");
