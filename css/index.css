@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+
+body{
+    background-color:  rgb(237, 222, 199);
+    color: maroon;
+    font-family: 'Permanent Marker', cursive;
+    border: 20px solid brown;
+    padding: 20px 20px 0px 20px;
+    margin: auto;
+}
+
+.sections{
+    color: red;
+    padding: 5px;
+    margin: 5px;
+    font-weight: 400;
+    font-size: xx-large;
+}
+
+#skills ul, #experience + h2{
+    text-transform: uppercase;
+    color:purple;
+}
+
+label{
+    font-size: 15px;
+    color: orangered;
+    margin: 8px;
+}
+
+input, textarea{
+    font-size: 12px; 
+    padding: 5px;
+    border: 3px double orange;
+    margin: 10px;
+}
+
+label[for="message"]{
+    top: -28px;
+    position: relative;
+}
+
+button[type="submit"] {
+    border-radius: 10px;
+    border: 2px dotted green;
+    box-shadow: aqua;
+    background-color: cadetblue;
+    color:white;
+}
+
+#removeBtn{
+    background-color: red;
+    color:white;
+    padding: 3px;
+}
+
+footer{
+    background-color: brown;
+    color:white;
+    margin-bottom: -10px;
+    height: 45px;
+    padding: 5px;
+    margin-top:10px;
+    width: 104%;
+    margin-left: -20px;
+}
