@@ -23,6 +23,13 @@ body{
     color:purple;
 }
 
+#skills ul li {
+    border: 2px solid red;
+    display: inline-block;
+    margin-right: 30px;
+    padding: 5px;
+}
+
 label{
     font-size: 15px;
     color: orangered;
