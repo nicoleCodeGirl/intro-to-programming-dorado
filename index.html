@@ -8,17 +8,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index_MQ.css">
     
 
     <title>Nicole's Profile Assignment</title>
 </head>
    
 <body>
-   
-    <section><img src="photos/photoNicole.jpeg" alt="Nicole" width="300" height="300" style="border-radius: 50%; position:relative; left:40%; margin-top:3%;"></section>
+    <header>
+        <nav>
+            <a href='#aboutMe'>ABOUT ME</a>
+            <a href="#experience">EXPERIENCE</a>
+            <a href="#skills">SKILLS</a>
+            <a href="#connect">CONNECT</a>
+         </nav>
+
+    </header>
+
+
+    <div id="content">
+        <section id="photoSection">
+        <img id="profilePic" src="photos/photoNicole.jpeg" alt="Nicole" width="300" height="300">
+        </section>
    
         <section>
-        <h1 class="sections">About:</h1>
+        <h1 id="aboutMe" class="sections">About:</h1>
         <h2>Hi, my name is Nicole Bradley. I love computer coding. It is my dream to one day be a game developer. 
             I am playing a game called Star Trek Fleet Command. 
             I have to play the games I want to learn how to make. Coding is my passion, and it always has been since
@@ -30,8 +44,12 @@
 
     <section>
         <h1 id="experience" class="sections">Experience:</h1>
-        <h2>I have 4 years experience in coding, and I am working on a project called "Greetings World". 
-        It is a social media site for greeting cards, set up like an email system. The project is in progress.</h2>
+        <div id="experienceList">
+            <p>I have 4 1/2 yrs experience in coding</p>
+            <p>I have a GitHub project in progress called "Greetings World"</p>
+            <p>I have 3 months experience in teahing myself Wordpress</p>
+            <p>I haver 5 years experience in JavaScript</p>
+        <div>
     </section>
 
     <section id="skills">
@@ -41,26 +59,34 @@
 
     <section>
         <h2 class="sections">Connect:</h2>
-        <p><a href="https://github.com/nicoleCodeGirl/greetingsWorld">https://github.com/nicoleCodeGirl/greetingsWorld</a></p>
+        <p><a id="gitHubLink" href="https://github.com/nicoleCodeGirl/greetingsWorld">https://github.com/nicoleCodeGirl/greetingsWorld</a></p>
         <p><a href="https://www.twitch.tv/nicolecodegirl">https://www.twitch.tv/nicolecodegirl</a></p>
     </section>  
 
     <section>
-        <h2 class="sections">Leave a Message</h2>
-        <form name="leave_message">
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name" required>
-            <br>
+        <h2 class="sections">Leave a Message:</h2>
+        <form id="leave_message" name="leave_message">
+            <div id="item-name">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required>
+                <br>
+           </div>
 
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" required>
-            <br>
+           <div id="item-email">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+                <br>
+            </div>
 
-            <label for="message">Message</label>
-            <textarea name="message" id="message" required></textarea>
-            <br>
+            <div id="item-message">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" required></textarea>
+                <br>
+            </div>
 
-            <button type="submit">Submit</button>
+            <div id="item-submit">
+                <button type="submit">Submit</button>
+            </div>
         </form>
     </section>
 
@@ -68,6 +94,7 @@
         <h2 class=""sections">Messages</h2>
         <ul></ul>
     </section>
+</div><!-- end content -->
 
     <footer></footer>
 
