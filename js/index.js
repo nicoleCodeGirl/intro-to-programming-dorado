@@ -142,24 +142,43 @@ function hideShow () {
 //function call to hide or show message list when page loads
 hideShow();
 
-let gitHubRequest = new XMLHttpRequest();
 
-gitHubRequest.open("GET", "https://api.github.com/users/nicoleCodeGirl/repos", true);
-gitHubRequest.send();
 
-gitHubRequest.onload = function() {
-    let repositories = JSON.parse(this.response);
-    console.log(repositories);
+// let gitHubRequest = new XMLHttpRequest();
+
+// gitHubRequest.open("GET", "https://api.github.com/users/nicoleCodeGirl/repos", true);
+// gitHubRequest.send();
+
+// gitHubRequest.onload = function() {
+//     let repositories = JSON.parse(this.response);
+//     console.log(repositories);
 
   
-let projectSection  = document.getElementById("projects");
-
-let projectList = projectSection.querySelector("ul");
-
-for (let i = 0; i < repositories.length; i++){
-    let project = document.createElement("li");
-    project.innerHTML = `<a href="https://www.github.com/nicolecodegirl/${repositories[i].name}">` + repositories[i].name + '</a>';
-    projectList.appendChild(project);
 
 
-}} 
+
+
+// } 
+
+
+//============lesson 6.2===============================
+
+fetch('https://api.github.com/users/nicoleCodeGirl/repos')
+  .then((response) => response.json())
+  .then(function(repositories) {
+    
+    let projectSection  = document.getElementById("projects");
+
+    let projectList = projectSection.querySelector("ul");
+
+    for (let i = 0; i < repositories.length; i++){
+        let project = document.createElement("li");
+        project.innerHTML = `<a href="https://www.github.com/nicolecodegirl/${repositories[i].name}">` + repositories[i].name + '</a>';
+        projectList.appendChild(project);
+        console.log(project.innerText)
+    
+    
+    }
+            console.log(repositories, "the array that has the list of repositories");
+
+  } );
