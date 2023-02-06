@@ -11,58 +11,89 @@ body{
 #content{
     border: 20px solid brown;
     background-color:  rgb(237, 222, 199);
+    background-image: url("../photos/pinkGradient.jpg");
+    background-size:cover;
     padding: 3% 3% 3% 3%;
     margin-left: 2%;
     margin-right: -3%;
 }
 
+
+
 header{
-    width: 98%;
+    padding: 3%;
     background-color: pink;
     height: 85px;
     margin: 0%;
-    border: 13px brown solid;
-    position:fixed;
-    z-index: 5;
+    border: 13px brown solid; 
+    
 }
 
-nav a{
-    margin-left:20px;
+#headerLogo{
+    float:left;
 }
 
-#profilePic{
-    border-radius: 50%; 
-    position:relative; 
-    left:40%; 
-    margin-top:3%;
+
+#headerNav{
+    color: purple;
+    font-size: 15px;
 }
-.sections{
+
+#headerNav a{
+    margin: auto 3% auto 3%;
+    text-decoration: none;
+}
+
+
+/*=================================
+Making a two column about me section
+================================*/
+
+.flex-container {
+    display: flex;
+  }
+
+.flexItem{
+    width: 50%;
+    background-color: #eaadc4;
+    line-height: 2;
+    padding: 4%;
+    margin: 2%;
+    box-shadow: inset -17px -18px 9px 6px #f475e1, inset 17px 18px 9px 6px #dd568f;
+  }
+
+#profilePic {
+    border: 25px double maroon;
+}
+
+.photoFlexContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sections, h2{
     color: red;
-    padding: 5px;
+    padding:3%;
     margin: 5px;
     font-weight: 400;
-    font-size: xx-large;
 }
 
-/*==============================
-            SKILLS
-================================*/
-#skills ul, #experience + h2{
-    text-transform: uppercase;
-    color:purple;
-}
-
-#skills ul li {
-    border: 2px solid red;
-    background-color: cornsilk;
-    display: inline-block;
-    margin-right: 30px;
-    padding: 5px;
+#aboutMe + p{
+    text-align: justify;
+    padding:3%;
 }
 
 /*==============================
             EXPERIENCE
 ================================*/
+
+#experienceBox{
+    border: 12px double magenta;
+    padding: 5%;
+    background-color: #babfee;
+    margin: 2%;
+    box-shadow: inset -17px -18px 9px -5px #e790d8, inset 17px 18px 9px -5px #afe8df;
+}
 
 #experienceList{
     display: flex; /* or inline-flex */
@@ -84,22 +115,94 @@ nav a{
 #experienceList p:nth-child(even) {
     background: rgb(172, 219, 232);
   }
+#back2Top{
+    float:right;
+}
 
+
+/*==============================
+            SKILLS
+================================*/
+#skills ul, #experience + h2{
+    text-transform: uppercase;
+    color:purple;
+}
+
+#skills ul li {
+    border: 2px solid red;
+    background-color: cornsilk;
+    display: inline-block;
+    margin: 3%;
+    padding: 4%;
+}
+
+/*Flex item for skills and projects*/
+
+.flexItem2nd{
+    width: 50%;
+    background-color: #f6e3e3;
+    line-height: 2;
+    padding: 3%;
+    margin: 2%;
+    box-shadow: inset -17px -18px 9px 6px #c508eb, inset 17px 18px 9px 6px #6828ea;
+   
+  
+  }
+
+  #projects ul li{
+    font-size: small;
+  }
+ /*================================================================
+               CONNECT - This is where the list of repositiories is
+  ================================================================*/
+
+#socialBox{
+    display: flex;
+    border: 12px double #5997da;
+    padding: 3%;
+    background-color: #d0f1cf;
+    margin: 2% auto 2% auto;
+    box-shadow: inset -17px -18px 9px -5px #909be7, inset 17px 18px 9px -5px #3abca7;
+}
+
+#connectFlexContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+#socialBox p, #socialBox div{
+    border: 5px dotted purple;
+    margin: 3%;
+    width: 50%;
+    padding: 3%;
+    color:purple;
+}
 
   /*==============================
                 FORM
   ================================*/
 
+  #messageBox{
+    box-shadow: inset -11px -14px 9px 4px rgb(119 20 221), inset 17px 24px 9px -2px rgb(0 212 255);
+    padding: 3%;
+    border: 7px double #787dde;
+    background-color: #f5eaef;
+  }
+
 #leave_message{
-    /* border: 1px rgb(227, 10, 155) solid; */
+    background: linear-gradient(37deg, rgba(2,0,36,1) 2%, rgba(119,20,221,1) 55%, rgba(0,212,255,1) 100%);
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 15px;
-  }
+    padding: 3%;
+}
+
 
 #leave_message div{
-    background-color: rgb(133, 199, 240);
-    border: 1px rgb(98, 64, 233) dotted;
+    padding: 3%;
+    border: 3px dotted pink;
   }
 
 #item-name{
@@ -107,11 +210,11 @@ nav a{
 }
 
 #item-email{
-    grid-column: 1/2;
+    grid-column: 2/2;
 }
 #item-message{
-    grid-column: 2/3;
-    grid-row: 1/3;
+    grid-column: 1/3;
+    grid-row: 2/12;
 }
 
 #item-submit{
@@ -121,9 +224,10 @@ nav a{
 
 
 label{
-    font-size: 15px;
-    color: orangered;
+    font-size: 2vw;
+    color: pink;
     margin: 8px;
+    text-shadow: -1px -1px 0 maroon, 2px 2px 0 maroon, 2px 3px 0 maroon;
 }
 
 input, textarea{
@@ -135,7 +239,7 @@ input, textarea{
 
 #message{
     height: 50%;
-    width: 50%;
+    width: 90%;
 }
 
 #name, #email{
@@ -146,17 +250,25 @@ input, textarea{
 
 
 label[for="message"]{
-    top: -28px;
     position: relative;
 }
 
 button[type="submit"] {
-    border-radius: 10px;
-    border: 2px dotted green;
+    margin: 3%;
+    border-radius: 15px;
+    border: 4px solid #eee9ed;
     box-shadow: aqua;
-    background-color: rgb(221, 68, 68);
-    color:white;
-    width: 100%;
+    background-color: rgb(179 99 225);
+    color: #eeeaf3;
+    width: 35%;
+    float: right;
+    padding: 1%;
+}
+
+#messages{
+    padding: 3%;
+    background-color: pink;
+    margin-top: 2%;
 }
 
 #removeBtn{
@@ -181,5 +293,15 @@ footer{
 }
 
 #copyright{
-    margin-left: 3%;
+    margin-left: 5%;
+}
+
+#footerNav{
+    float:right;
+    padding-right:40px;
+    margin-right: 10%;
+}
+
+#footerNav a{
+    color:rgb(246, 200, 230);
 }

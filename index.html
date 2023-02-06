@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,100 +10,138 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/index_MQ.css">
-    
+    <link rel="icon" href="/photos/purpleButterfly.png">
 
     <title>Nicole's Profile Assignment</title>
+
 </head>
-   
+
 <body>
-    <header>
-        <nav>
+    <header id="top">
+        <nav id="headerNav">
+            <img id="headerLogo" src="photos/purpleButterfly.png" alt="purple butterfly logo" width="100" height="100">
+
             <a href='#aboutMe'>ABOUT ME</a>
             <a href="#experience">EXPERIENCE</a>
             <a href="#skills">SKILLS</a>
+            <a href="#projects">PROJECTS</a>
             <a href="#connect">CONNECT</a>
-         </nav>
+        </nav>
 
     </header>
 
+    <div class="flex-container" id="aboutFlex">
+        <div class="flexItem">
+            <h2 id="aboutMe">About Nicole Bradley:</h2>
+            <p>Hi, my name is Nicole Bradley. I also go by the name NicoleCodeGirl on gaming & streaming platforms. I love 
+                computer coding. It is my dream to one day be a game developer. I am playing a game called Star Trek Fleet 
+                Command. I have to play the games I want to learn how to make. Coding is my passion, and it always has been 
+                since I was young. Right now I am doing an internship as a WordPress Developer for a website called "My Dosha Tea". 
+                I have taught myself how to do WordPress & Elementor by watching YouTube videos. I am also taking coding through 
+                Code the Dream. If I don't know something, I will do everything I can to learn it. I will never say I don't know 
+                how to do something because I will always continue to strive for the knowledge. Coding is what makes me happy!
+            </p>
+        </div>
+
+        <div class="flexItem photoFlexContainer">
+            <img id="profilePic" src="photos/photoNicole.jpeg" alt="photo of Nicole" width="200" height="300">
+        </div>
+    </div><!-- end of the flex container-->
+
 
     <div id="content">
-        <section id="photoSection">
-        <img id="profilePic" src="photos/photoNicole.jpeg" alt="Nicole" width="300" height="300">
+
+        <section id="experienceBox">
+            <h2 id="experience" class="sections">Experience:</h2>
+            <div id="experienceList">
+                <p>I have 4 1/2 yrs experience in coding</p>
+                <p>I have a GitHub project in progress called "Greetings World"</p>
+                <p>I have 3 months experience in teahing myself Wordpress</p>
+                <p>I haver 5 years experience in JavaScript</p>
+                <div>
+                    <a href="#top" id="back2Top">BACK TO TOP</a>
         </section>
-   
+
+        <div class="flex-container" id="skillsProjects-flexContainer">
+
+            <section id="skills" class="flexItem2nd">
+                <h2 class="sections">Skills:</h3>
+                    <ul></ul>
+            </section>
+
+            <section id="projects" class="flexItem2nd">
+                <h2>Projects</h2>
+                <ul></ul>
+            </section>
+
+        </div><!--end flex container for the skills and projects-->
+
+
+        <section id="socialBox">
+            <p>Please connect with me. I would love to meet other coders and gamers!</p>
+            <div id="connectFlexContainer">
+            <h2 id="connect" class="sections">Connect:</h2>
+            
+                <a id="gitHubLink" href="https://github.com/nicoleCodeGirl/greetingsWorld">
+                    <ion-icon name="logo-github" size="large"></ion-icon>
+                </a>
+
+                <a href="https://www.twitch.tv/nicolecodegirl">
+                    <ion-icon name="logo-twitch" size="large"></ion-icon>
+                </a>
+            </div>
+        </section>
+
+    <div id="messageBox">
         <section>
-        <h1 id="aboutMe" class="sections">About:</h1>
-        <h2>Hi, my name is Nicole Bradley. I love computer coding. It is my dream to one day be a game developer. 
-            I am playing a game called Star Trek Fleet Command. 
-            I have to play the games I want to learn how to make. Coding is my passion, and it always has been since
-            I was young. Right now I am doing an internship in web design for My Dosha Tea. I have taught myself how to do WordPress
-            and I am also taking coding through Code the Dream. If I don't know something, I will do everything I can to learn it.  
-            I will never say I don't know how to do something because I will always continue to strive for the knowledge
-            Coding is what makes me happy!</h2>
-    </section>
+            <h2 class="sections">Leave a Message:</h2>
+            <form id="leave_message" name="leave_message">
+                <div id="item-name">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" required>
+                    <br>
+                </div>
 
-    <section>
-        <h1 id="experience" class="sections">Experience:</h1>
-        <div id="experienceList">
-            <p>I have 4 1/2 yrs experience in coding</p>
-            <p>I have a GitHub project in progress called "Greetings World"</p>
-            <p>I have 3 months experience in teahing myself Wordpress</p>
-            <p>I haver 5 years experience in JavaScript</p>
-        <div>
-    </section>
+                <div id="item-email">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required>
+                    <br>
+                </div>
 
-    <section id="skills">
-        <h2 class="sections">Skills:</h3>
+                <div id="item-message">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" placeholder="Type your message" rows="10" cols="33"
+                        required></textarea>
+                    <br>
+                </div>
+
+                <div id="item-submit">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="messages">
+            <h2 class="sections">Messages</h2>
             <ul></ul>
-    </section>
+        </section>
+    </div><!--end div for the message box-->
+    </div><!-- end content -->
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul></ul>
-    </section>
+    <footer>
 
-    <section>
-        <h2 class="sections">Connect:</h2>
-        <p><a id="gitHubLink" href="https://github.com/nicoleCodeGirl/greetingsWorld">https://github.com/nicoleCodeGirl/greetingsWorld</a></p>
-        <p><a href="https://www.twitch.tv/nicolecodegirl">https://www.twitch.tv/nicolecodegirl</a></p>
-    </section>  
+        <nav id="footerNav">
+            <a href="#top">BACK TO TOP</a>
 
-    <section>
-        <h2 class="sections">Leave a Message:</h2>
-        <form id="leave_message" name="leave_message">
-            <div id="item-name">
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name" required>
-                <br>
-           </div>
-
-           <div id="item-email">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" required>
-                <br>
-            </div>
-
-            <div id="item-message">
-                <label for="message">Message</label>
-                <textarea name="message" id="message" required></textarea>
-                <br>
-            </div>
-
-            <div id="item-submit">
-                <button type="submit">Submit</button>
-            </div>
-        </form>
-    </section>
-
-    <section id="messages">
-        <h2 class=""sections">Messages</h2>
-        <ul></ul>
-    </section>
-</div><!-- end content -->
-
-    <footer></footer>
+        </nav>
+    </footer>
 
     <script src="js/index.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
 </body>
+
 </html>
