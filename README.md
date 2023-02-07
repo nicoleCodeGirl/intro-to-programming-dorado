@@ -48,3 +48,12 @@ Mentors will be happy to help out and your fellow students will benefit from you
 ---
 
 Created by [Code the Dream](https://www.codethedream.org)
+
+===================================================
+
+BY NICOLE BRADLEY
+
+MY CERTIFICATE FOR COMPLETING THE COURSE:
+
+[Nicole Bradley Dorado.pdf](https://github.com/nicoleCodeGirl/intro-to-programming-dorado/files/10671671/Nicole.Bradley.Dorado.pdf)
+
