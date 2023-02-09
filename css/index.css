@@ -78,9 +78,12 @@ Making a two column about me section
     font-weight: 400;
 }
 
-#aboutMe + p{
-    text-align: justify;
+#aboutMe{
     padding:3%;
+}
+
+.aboutMeParagraph{
+    text-align: justify;
 }
 
 /*==============================
